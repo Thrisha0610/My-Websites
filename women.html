@@ -1,0 +1,311 @@
+<html>
+<head>
+    <title>FashionFix - Women</title>
+    <style>
+        body {
+            font-family: 'Lucida Handwriting', cursive;
+            background-color: #CCFFCC;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #444444;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center; 
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            padding: 0 15px; 
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bolder;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #FFD700; 
+        }
+        .logo {
+            text-align: center;
+            font-family: 'Papyrus', fantasy;
+            font-weight: bolder;
+            font-size: 36px;
+            margin: 20px 0;
+            color: #2E8B57; 
+        }
+        h1 {
+            text-align: center;
+            color: #2E8B57;
+            margin: 20px 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+            padding: 20px;
+            max-width: 1200px; 
+            margin: 0 auto;
+        }
+        .card {
+            flex: 0 0 calc(25% - 20px); 
+            max-width: 250px; 
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 10px 0; 
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between; 
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 10px;
+    object-fit: cover; 
+    background-color: #f0f0f0; 
+}
+
+        .card h1 {
+            font-size: 20px;
+            color: #333; 
+            margin: 10px 0;
+        }
+        .card h2 {
+            font-size: 18px;
+            color: #FF4500; 
+            margin: 10px 0;
+        }
+        .card button {
+            background-color: #28a745; 
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: auto; 
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .card button:hover {
+            background-color: #218838; 
+            transform: scale(1.05);
+        }
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            font-size: 16px;
+            color: green;
+            font-weight: bolder;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            text-align: center;
+        }
+        .back-button:hover {
+            color: #0056b3; 
+        }
+		@media (max-width: 768px) {
+    .card {
+        flex: 0 0 calc(50% - 20px); 
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        flex: 0 0 100%;
+    }
+}
+footer {
+    background-color: #2c3e50; 
+    color: #ecf0f1; 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); 
+}
+footer a {
+    color: #ffdd44; 
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s; 
+}
+footer a:hover {
+    color: #e67e22; 
+}
+footer p {
+    margin: 5px 0;
+}
+    </style>
+</head>
+<body>
+    <h1 class="logo">FashionFix</h1>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="kid.html">Kids</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+    <h1>Discover women's fashion in your own style!</h1>
+
+    <!-- Products -->
+    <div class="container">
+        <div class="card">
+            <img src="w1.jpg" alt="Wedding dress">
+            <h1>Wedding dress</h1>
+            <h2>Price: Rs.8500</h2>
+            <button onclick="addToCart('Wedding dress', 8500)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w2.jpg" alt="Floral print & flare dress">
+            <h1>Floral print & flare dress</h1>
+            <h2>Price: Rs.595</h2>
+            <button onclick="addToCart('Floral print & flare dress', 595)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w3.jpg" alt="Kurta pant & coat set">
+            <h1>Kurta pant & coat set</h1>
+            <h2>Price: Rs.364</h2>
+            <button onclick="addToCart('Kurta pant & coat set', 364)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w4.jpg" alt="Flared white rayon trousers">
+            <h1>Flared white rayon trousers</h1>
+            <h2>Price: Rs.484</h2>
+            <button onclick="addToCart('Flared white rayon trousers', 484)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w5.jpg" alt="White cotton blend trousers">
+            <h1>White cotton blend trousers</h1>
+            <h2>Price: Rs.350</h2>
+            <button onclick="addToCart('White cotton blend trousers', 350)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w6.jpg" alt="Grey jeans">
+            <h1>Grey jeans</h1>
+            <h2>Price: Rs.879</h2>
+            <button onclick="addToCart('Grey jeans', 879)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w7.jpg" alt="Blue jeans">
+            <h1>Blue jeans</h1>
+            <h2>Price: Rs.552</h2>
+            <button onclick="addToCart('Blue jeans', 552)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w8.jpg" alt="Red embroidered top">
+            <h1>Red embroidered top</h1>
+            <h2>Price: Rs.337</h2>
+            <button onclick="addToCart('Red embroidered top', 337)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w9.jpg" alt="Panda sweatshirt">
+            <h1>Panda sweatshirt</h1>
+            <h2>Price: Rs.329</h2>
+            <button onclick="addToCart('Panda sweatshirt', 329)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w10.jpg" alt="Rayon top & plazzo set">
+            <h1>Rayon top & plazzo set</h1>
+            <h2>Price: Rs.443</h2>
+            <button onclick="addToCart('Rayon top & plazzo set', 443)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w11.jpg" alt="Cream georgette top">
+            <h1>Cream georgette top</h1>
+            <h2>Price: Rs.285</h2>
+            <button onclick="addToCart('Cream georgette top', 285)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w12.jpg" alt="Black bralette">
+            <h1>Black bralette</h1>
+            <h2>Price: Rs.412</h2>
+            <button onclick="addToCart('Black bralette', 412)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w13.jpg" alt="Blue printed kurta">
+            <h1>Blue printed kurta</h1>
+            <h2>Price: Rs.486</h2>
+            <button onclick="addToCart('Blue printed kurta', 486)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w14.jpg" alt="Pink dress">
+            <h1>Pink dress</h1>
+            <h2>Price: Rs.275</h2>
+            <button onclick="addToCart('Pink dress', 275)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w15.jpg" alt="Red crepe kurta & salwar set">
+            <h1>Red crepe kurta & salwar set</h1>
+            <h2>Price: Rs.849</h2>
+            <button onclick="addToCart('Red crepe kurta & salwar set', 849)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w16.jpg" alt="Summer casual kurti">
+            <h1>Summer casual kurti</h1>
+            <h2>Price: Rs.599</h2>
+            <button onclick="addToCart('Summer casual kurti', 599)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="w17.jpg" alt="Green banarasi gown">
+            <h1>Green banarasi gown</h1>
+            <h2>Price: Rs.1450</h2>
+            <button onclick="addToCart('Green banarasi gown', 1450)">Add to Cart</button>
+        </div>
+    </div>
+
+    <button class="back-button" onclick="goBack()">Go Back</button>
+
+    <script>
+        function addToCart(productName, price) {
+            let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            let existingProductIndex = cartItems.findIndex(item => item.name === productName);
+
+            if (existingProductIndex !== -1) {
+                cartItems[existingProductIndex].quantity++;
+            } else {
+                cartItems.push({ name: productName, price: price, quantity: 1 });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+			alert(productName + " has been added to your cart.");
+            window.location.href = "cart.html";  
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 FashionFix. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a>
+        </p>
+        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
