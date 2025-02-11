@@ -1,0 +1,281 @@
+<html>
+<head>
+    <title>FashionFix</title>
+    <style>
+        body {
+            font-family: 'Lucida Handwriting', cursive;
+            background-color: #CCFFCC;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #444444;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center; 
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            padding: 0 15px; 
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bolder;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #FFD700; 
+        }
+        .logo {
+            text-align: center;
+            font-family: 'Papyrus', fantasy;
+            font-weight: bolder;
+            font-size: 36px;
+            margin: 20px 0;
+            color: #2E8B57; 
+        }
+        h1 {
+            text-align: center;
+            color: #2E8B57;
+            margin: 20px 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+            padding: 20px;
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .card {
+            flex: 0 0 calc(25% - 20px); 
+            max-width: 250px; 
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 10px 0; 
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #ffffff; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+		.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 10px;
+    object-fit: cover; 
+    background-color: #f0f0f0; 
+        }
+        .card h1 {
+            font-size: 20px;
+            color: #333; 
+            margin: 10px 0;
+        }
+        .card h2 {
+            font-size: 18px;
+            color: #FF4500; 
+            margin: 10px 0;
+        }
+        .card button {
+            background-color: #28a745; 
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: auto; 
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .card button:hover {
+            background-color: #218838; 
+            transform: scale(1.05);
+        }
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            font-size: 16px;
+            color: green;
+            font-weight: bolder;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            text-align: center;
+        }
+        .back-button:hover {
+            color: #0056b3; 
+        }
+		@media (max-width: 768px) {
+    .card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        flex: 0 0 100%; 
+    }
+}
+footer {
+    background-color: #2c3e50; 
+    color: #ecf0f1; 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); 
+}
+footer a {
+    color: #ffdd44; 
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s; 
+}
+footer a:hover {
+    color: #e67e22; 
+}
+footer p {
+    margin: 5px 0;
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="logo">FashionFix</h1>
+    <nav>
+        <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="kid.html">Kids</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <h1>Discover Men's Fashion in Your Own Style!</h1>
+    <div class="container">
+        <div class="card">
+            <img src="m2.jpg" alt="Men's stylish pant">
+            <h1>Men's Stylish Pant</h1>
+            <h2>Price: Rs.999</h2>
+            <button onclick="addToCart('Men\'s stylish pant', 999)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m3.jpg" alt="Men's stylish pant">
+            <h1>Men's Stylish Pant</h1>
+            <h2>Price: Rs.929</h2>
+            <button onclick="addToCart('Men\'s stylish pant', 929)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m4.jpg" alt="Men's stylish jeans">
+            <h1>Men's Stylish Jeans</h1>
+            <h2>Price: Rs.850</h2>
+            <button onclick="addToCart('Men\'s stylish jeans', 850)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m5.jpg" alt="Men's stylish pant">
+            <h1>Men's Stylish Pant</h1>
+            <h2>Price: Rs.899</h2>
+            <button onclick="addToCart('Men\'s stylish pant', 899)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m6.jpg" alt="Men's stylish pant">
+            <h1>Men's Stylish Pant</h1>
+            <h2>Price: Rs.799</h2>
+            <button onclick="addToCart('Men\'s stylish pant', 799)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m7.jpg" alt="Men's oversized t-shirt">
+            <h1>Men's Oversized T-Shirt</h1>
+            <h2>Price: Rs.520</h2>
+            <button onclick="addToCart('Men\'s oversized t-shirt', 520)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m8.jpg" alt="Men's fashion sweatshirt">
+            <h1>Men's Fashion Sweatshirt</h1>
+            <h2>Price: Rs.499</h2>
+            <button onclick="addToCart('Men\'s fashion sweatshirt', 499)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m9.jpg" alt="Men's oversized baggy shirt">
+            <h1>Men's Oversized Baggy Shirt</h1>
+            <h2>Price: Rs.450</h2>
+            <button onclick="addToCart('Men\'s oversized baggy shirt', 450)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m10.jpg" alt="Men's cotton blend shirt">
+            <h1>Men's Cotton Blend Shirt</h1>
+            <h2>Price: Rs.499</h2>
+            <button onclick="addToCart('Men\'s cotton blend shirt', 499)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m11.jpg" alt="Men's Popcorn shirt">
+            <h1>Men's Popcorn Shirt</h1>
+            <h2>Price: Rs.599</h2>
+            <button onclick="addToCart('Men\'s popcorn shirt', 599)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m12.jpg" alt="Men's solid casual black shirt">
+            <h1>Men's Solid Casual Black Shirt</h1>
+            <h2>Price: Rs.629</h2>
+            <button onclick="addToCart('Men\'s solid casual black shirt', 629)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="m13.jpg" alt="Men's classy casual shirt">
+            <h1>Men's Classy Casual Shirt</h1>
+            <h2>Price: Rs.589</h2>
+            <button onclick="addToCart('Men\'s classy casual shirt', 589)">Add to Cart</button>
+        </div>
+    </div>
+
+    <button class="back-button" onclick="goBack()">Go Back</button>
+    <script>
+        function addToCart(productName, price) {
+            let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            let existingProductIndex = cartItems.findIndex(item => item.name === productName);
+
+            if (existingProductIndex !== -1) {
+                cartItems[existingProductIndex].quantity++;
+            } else {
+                cartItems.push({ name: productName, price: price, quantity: 1 });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+			alert(productName + " has been added to your cart.");
+            window.location.href = "cart.html";  
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 FashionFix. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a>
+        </p>
+        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
